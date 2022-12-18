@@ -9,7 +9,25 @@
     <link rel = "stylesheet" href="game.css">
 </head>
 <body>
-    <p1 id = "word">Hello</p1>    
-    <button onclick = 'printWord()' >click</button>
+    <h1 id = "Title">Point Tracker</h1>    
+    <section class = "player" id = "player">
+        <p1 id = "player1">Player 1</p1>
+        <input id = "player-1" type = "text" name = "name1" placeholder = "Enter your name">
+        <button id = "submitButton1" onclick = "changeName(1)">Enter</button>
+        <br>
+        <p2 id = "player2">Player 2</p2>
+        <input id = "player-2" type = "text" name = "name2" placeholder = "Enter your name">
+        <button id = "submitButton2" onclick = "changeName(2)">Enter</button>
+        <br>
+        <p3 id = "player3">Player 3</p3>
+        <input id = "player-3" type = "text" name = "name3" placeholder = "Enter your name">
+        <button id = "submitButton3" onclick = "changeName(3)">Enter</button>
+        <br>
+        <p4 id = "player4">Player 4</p4>
+        <input id = "player-4" type = "text" name = "name4" placeholder = "Enter your name">
+        <button id = "submitButton4" onclick = "changeName(4)">Enter</button>
+        <br>
+        <button id = "gameButton" hidden>Start Game</button>
+    </section>
 </body>
 </html>
