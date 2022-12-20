@@ -22,6 +22,8 @@ function startGame(){
     playerChart(playerList);
     displayName(playerList);
     document.getElementById("playerPoints").style.display = "block";
+    document.getElementById("newRound").style.display = "initial";
+    document.getElementById("endGame").style.display = "initial";
 }
 
 function displayName(data){
