@@ -5,29 +5,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src = "index.js"></script>
     <link rel = "stylesheet" href="game.css">
 </head>
 <body>
-    <h1 id = "Title">Point Tracker</h1>    
-    <section class = "player" id = "player">
-        <p1 id = "player1">Player 1</p1>
-        <input id = "player-1" type = "text" name = "name1" placeholder = "Enter your name">
-        <button id = "submitButton1" onclick = "changeName(1)">Enter</button>
+    <h1 id = "Title">Point Tracker</h1>
+    <div class="players" id = "player">
+        <section class = "player" id = "player">
+            <p1 id = "player1">Player 1</p1>
+            <input id = "player-1" type = "text" name = "name1" placeholder = "Enter your name">
+            <button id = "submitButton1" onclick = "changeName(1)">Enter</button>
+            <br>
+            <p1 id = "player2">Player 2</p1>
+            <input id = "player-2" type = "text" name = "name2" placeholder = "Enter your name">
+            <button id = "submitButton2" onclick = "changeName(2)">Enter</button>
+            <br>
+            <p1 id = "player3">Player 3</p1>
+            <input id = "player-3" type = "text" name = "name3" placeholder = "Enter your name">
+            <button id = "submitButton3" onclick = "changeName(3)">Enter</button>
+            <br>
+            <p1 id = "player4">Player 4</p1>
+            <input id = "player-4" type = "text" name = "name4" placeholder = "Enter your name">
+            <button id = "submitButton4" onclick = "changeName(4)">Enter</button>
+            <br>
+            <button id = "gameButton" hidden onclick = "startGame()">Start Game</button>
+            <button id = "redoButton" onClick="window.location.reload();">Redo</button>
+        </section>
+    </div>
+    <br>
+    <div class = "info-chart" id = "info-chart">
+        <table class = "table1" hidden id = "table1">
+            <tr>
+              <th># of Cards</th>
+              <th>Multiplier</th>
+            </tr>
+            <tr>
+              <td>1-5</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>6-9</td>
+              <td>2</td>
+            </tr>
+            <tr>
+                <td>10-12</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>4</td>
+            </tr>
+        </table>
         <br>
-        <p2 id = "player2">Player 2</p2>
-        <input id = "player-2" type = "text" name = "name2" placeholder = "Enter your name">
-        <button id = "submitButton2" onclick = "changeName(2)">Enter</button>
-        <br>
-        <p3 id = "player3">Player 3</p3>
-        <input id = "player-3" type = "text" name = "name3" placeholder = "Enter your name">
-        <button id = "submitButton3" onclick = "changeName(3)">Enter</button>
-        <br>
-        <p4 id = "player4">Player 4</p4>
-        <input id = "player-4" type = "text" name = "name4" placeholder = "Enter your name">
-        <button id = "submitButton4" onclick = "changeName(4)">Enter</button>
-        <br>
-        <button id = "gameButton" hidden>Start Game</button>
-    </section>
+    </div>
+    <div class = "player-chart" id = "player-chart">
+        <table class = "table2" hidden id = "table2">
+            <tr>
+              <th>Name</th>
+              <th>Points</th>
+            </tr>
+            <tbody id = "playerTable">
+
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class = "round" hidden id = "round">Round 1</div>
+    <br>
+    <div class ="playerPoints" hidden id = "playerPoints">
+        <p1 class = "player1name" id = "player1name"></p1>
+            <input id = "player1-points" type = "text" name = "name1" placeholder = "Points this round">
+            <button id = "points1" onclick = "addPoints(1)">Enter</button>
+            <br>
+        <p1 class = "player2name" id = "player2name"></p1>
+            <input id = "player2-points" type = "text" name = "name1" placeholder = "Points this round">
+            <button id = "points2" onclick = "addPoints(2)">Enter</button>
+            <br>
+        <p1 class = "player3name" id = "player3name"></p1>
+            <input id = "player3-points" type = "text" name = "name1" placeholder = "Points this round">
+            <button id = "points3" onclick = "addPoints(3)">Enter</button>
+            <br>
+        <p1 class = "player4name" id = "player4name"></p1>
+            <input id = "player4-points" type = "text" name = "name1" placeholder = "Points this round">
+            <button id = "points4" onclick = "addPoints(4)">Enter</button>
+            <br>
+    </div>
+    <br>
+    <button onclick="updateChart(playerList)">Update Scores</button>
 </body>
+<script src = "index.js"></script>
+<script src = "player.js"></script>
 </html>
