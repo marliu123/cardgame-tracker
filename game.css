@@ -1,14 +1,93 @@
 :root{
-    background-color:#D2B48C;
+    background-color:#252839;
 }
 
 h1{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 100%;    
+    display: flex;
+    position: relative;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    -webkit-text-stroke: .3vw #383d52;
+    text-transform: uppercase; 
+}
+
+h1::before{
+    content: attr(data-text);
+    position: absolute;
+    color: #01fe87;
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 1px solid #01fe87;
+    overflow: hidden;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate{
+    0%,100%{
+        width: 0;
+    }
+    70%{
+        width: 50%;
+    }
 }
 
 .players{
     font-size: 30px;
+    color: #01fe87;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#player-1, #player-2, #player-3, #player-4{
+    border-color: #01fe87;
+    border-radius: 10px;
+    height: 35px;
+    margin-top: 20px;
+    margin: 10px;
+    background: transparent;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#player-1, #player-2, #player-3, #player-4, select, textarea{
+    color:#01fe87;
+}
+
+#submitButton1, #submitButton2, #submitButton3, #submitButton4 {
+    border-color: #01fe87;
+    border-radius: 90px;
+    background: transparent;
+    margin: 5px;
+    height: 35px;
+}
+
+#submitButton1, #submitButton2, #submitButton3, #submitButton4, select, textarea {
+    color: #01fe87;
+}
+
+#gameButton{
+    margin-top: 40px;
+    margin-left: 65px;
+    border-color: #01fe87;
+    border-radius: 90px;
+    background: transparent;
+    color: #01fe87;
+    height: 40px;
+    font-size: 18px;
+}
+
+#redoButton{
+    margin-left: 40px;
+    display: inline-block;
+    border-color: #01fe87;
+    border-radius: 90px;
+    background: transparent;
+    color: #01fe87;
+    height: 40px;
+    font-size: 18px;
+    margin-top: 40px;
 }
 
 .table1{
@@ -28,6 +107,37 @@ h1{
 
 .round{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #01fe87;
+}
+
+.playerPoints{
+    color: #01fe87;
+}
+
+#points1, #points2, #points3, #points4 {
+    border-color: #01fe87;
+    border-radius: 90px;
+    background: transparent;
+    margin: 5px;
+    height: 35px;
+}
+
+#points1, #points2, #points3, #points4 , select, textarea {
+    color: #01fe87;
+}
+
+#newRound, #endGame {
+    border-color: #01fe87;
+    border-radius: 90px;
+    background: transparent;
+    margin: 5px;
+    height: 40px;
+    margin-left: 40px;
+}
+
+#newRound, #endGame, select, textarea {
+    color: #01fe87;
+    font-size: 13px;
 }
 
 th, td{
@@ -48,19 +158,68 @@ tr:nth-child(odd){
     font-size: 30px;
 }
 
+@media screen and (max-width: 2500px){
+    h1{
+        font-size: 60px;
+    }
+
+
+    .round{
+        margin-left: 95px;
+    }
+
+    @keyframes animate{
+        0%,100%{
+            width: 0;
+        }
+        70%{
+            width: 30%;
+        }
+    }
+
+    .players{
+        font-size: 30px;
+        color: #01fe87;
+        padding: 0px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    #gameButton{
+        margin-left: 0px;
+    }
+}
+
 @media screen and (max-width: 1500px){
     h1{
         font-size: 60px;
     }    
+
+    @keyframes animate{
+        0%,100%{
+            width: 0;
+        }
+        70%{
+            width: 40%;
+        }
+    }
     
 }
+
 
 @media screen and (max-width: 1000px){
     h1{
         font-size: 40px;
     }
 
-    
+    @keyframes animate{
+        0%,100%{
+            width: 0;
+        }
+        70%{
+            width: 35%;
+        }
+    }
 }
 
 @media screen and (max-width: 500px){
@@ -78,6 +237,57 @@ tr:nth-child(odd){
     }
 
     .round{
-        margin-left: 125px;
+        margin-left: 115px;
     }
+
+    @keyframes animate{
+        0%,100%{
+            width: 0;
+        }
+        70%{
+            width: 45%;
+        }
+    }
+
+    .players{
+        font-size: 30px;
+        color: #01fe87;
+        padding: 0px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    #gameButton{
+        margin-left: 0px;
+    }
+    
+    #newRound{
+        margin-left: 92px;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
+
+
+table{
+ border-radius: 12px 12px 12px 12px;
+ overflow: hidden;
+ 
+}
+
+th{
+ background-color: #3d58a0;
+ color: #fafafa;
+ font-family: 'Open Sans',Sans-serif;
+ font-weight: 200;
+ text-transform: uppercase;
+
+}
+tr{
+ width: 100%;
+ background-color: #fafafa;
+ font-family: 'Montserrat', sans-serif;
+}
+tr:nth-child(even){
+ background-color: #eeeeee;
 }

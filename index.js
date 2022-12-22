@@ -9,7 +9,7 @@ function changeName(num){
     document.getElementById("player-"+num).style.display = "none";
     playerNum++;
     if(playerNum == 4){
-        document.getElementById("gameButton").style.display = "block";
+        document.getElementById("gameButton").style.display = "inline-block";
     }
     newPlayer(userInput);
 }
@@ -36,3 +36,19 @@ function displayName(data){
     let player4 = document.querySelector('#player4name');
     player4.innerHTML = data[3].getName().value;
 }
+
+$(document).ready(function() {
+
+  $('a').hoverIntent(function() {
+      $(this).removeClass('active');
+      setTimeout(function(){
+        $(this).addClass('temp');
+      },500);
+    },
+    function() {
+      $(this).addClass('active');
+    $(this).removeClass('temp');
+    }
+  );
+
+});

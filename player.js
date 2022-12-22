@@ -59,7 +59,7 @@ function updateChart(){
 }
 
 function addPoints(num){
-    let points = document.querySelector("#player"+num+"-points").value;
+    let points = Math.abs(document.querySelector("#player"+num+"-points").value);
     if(points == 0){
         winnerNum = num - 1;
     }
