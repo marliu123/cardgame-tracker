@@ -56,6 +56,7 @@ function updateChart(){
         document.getElementById("points"+j).style.display = "initial";
     }
     document.getElementById("round").innerHTML = "ROUND " + round;
+    reset();
 }
 
 function addPoints(num){
@@ -77,5 +78,16 @@ function addPoints(num){
         winnerPoints += points * 4;
     }
     document.getElementById("points"+num).style.display = "none";
+    document.getElementById("player"+num+"-points").style.display = "none";
+    document.getElementById("player"+num+"name").innerHTML += " : " +points;
+
+}
+
+function reset(){
+    for(var i = 1; i < playerList.length + 1; i++){
+        document.getElementById("player" +i+ "-points").style.display = "initial";
+        document.getElementById("player"+i+"name").innerHTML = playerList[i - 1].getName().value;
+    }
+    
 }
 

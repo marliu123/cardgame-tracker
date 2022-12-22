@@ -126,6 +126,19 @@ h1::before{
     color: #01fe87;
 }
 
+#player1-points, #player2-points, #player3-points, #player4-points {
+    border-color: #01fe87;
+    border-radius: 90px;
+    background: transparent;
+    margin: 5px;
+    height: 35px;
+}
+
+#player1-points, #player2-points, #player3-points, #player4-points, select, textarea{
+   color:#01fe87;
+   text-align: center;
+}
+
 #newRound, #endGame {
     border-color: #01fe87;
     border-radius: 90px;
